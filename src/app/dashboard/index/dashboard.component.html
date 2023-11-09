@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand mx-auto" routerLink="/personagens">
+        <img src="https://i.postimg.cc/4KnLQQ2p/pngimg-com-rick-morty-PNG40.png" width="200px">
+      </a>
+      
+      <button class="navbar-toggler" type="button" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/personagens">Personagens</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/locais">Locais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/episodios">Episodios</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/perfil">Meu Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="loginService.logout();" style="cursor: pointer;">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6" *ngIf="visualizarFiltro()">
+        <input type="text" class="form-control input-filtro"  name="filtro" [(ngModel)]="dashboardService.filtro" (input)="filtrar()" placeholder="Buscar por Nome">
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>

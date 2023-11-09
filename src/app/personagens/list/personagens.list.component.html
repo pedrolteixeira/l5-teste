@@ -1,0 +1,20 @@
+<div class="text-center mt-5">
+    <h2>Personagens</h2>
+</div>
+
+<div class="cards-container">
+    <div class="card card-list" style="width: 15rem;" *ngFor="let personagem of personagensService.personagens">
+        <img class="card-img-top" [src]="personagem.image">
+        <div class="card-body">
+            <h5 class="card-title">{{ personagem.name }}</h5>
+            <button class="btn btn-primary mt-3" (click)="verDetalhesPersonagem(personagem)">Ver Detalhes</button>
+        </div>
+    </div>
+    <div
+     class="infinite-scroll-container"
+     infinite-scroll
+     [infiniteScrollDistance]="2" 
+     [infiniteScrollThrottle]="50" 
+     (scrolled)="onScroll()">
+   </div>
+</div>

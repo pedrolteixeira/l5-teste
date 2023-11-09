@@ -1,0 +1,29 @@
+<div class="text-center mt-5">
+    <h2>Episódios</h2>
+</div>
+
+<table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nome do Episódio</th>
+        <th scope="col">Data</th>
+        <th scope="col">Código</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let episodio of episodiosService.episodios">
+        <td><img src="https://i.postimg.cc/LXyGgnQz/television-3d-illustration-isolated-on-transparent-background-png.png" style="width: 30px;"></td>
+        <td>{{ episodio.name }}</td>
+        <td>{{ episodio.air_date }}</td>
+        <td>{{ episodio.episode }}<td>
+      </tr>
+    </tbody>
+    <div
+    class="infinite-scroll-container"
+    infinite-scroll
+    [infiniteScrollDistance]="2" 
+    [infiniteScrollThrottle]="50" 
+    (scrolled)="onScroll()">
+  </div>
+  </table>

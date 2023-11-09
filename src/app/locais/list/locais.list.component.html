@@ -1,0 +1,29 @@
+<div class="text-center mt-5">
+    <h2>Locais</h2>
+</div>
+
+<table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nome do Local</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Dimensão</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let local of locaisService.locais">
+        <td><img src="https://i.postimg.cc/063tWKhF/pngwing-com.png" style="width: 30px;"></td>
+        <td>{{ local.name }}</td>
+        <td>{{ local.type }}</td>
+        <td>{{ local.dimension }}<td>
+      </tr>
+    </tbody>
+    <div
+    class="infinite-scroll-container"
+    infinite-scroll
+    [infiniteScrollDistance]="2" 
+    [infiniteScrollThrottle]="50" 
+    (scrolled)="onScroll()">
+  </div>
+  </table>

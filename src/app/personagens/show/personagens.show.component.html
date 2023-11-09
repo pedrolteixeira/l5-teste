@@ -1,0 +1,29 @@
+<div class="text-center mt-5">
+    <h2>Detalhe Personagem</h2>
+</div>
+
+
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <img class="card-img-left" [src]="personagem.image">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <label>Nome:</label>
+                <input class="form-control mb-3" [value] ="personagem.name" disabled>
+                <label>Status:</label>
+                <input class="form-control mb-3" [value] ="personagem.status" disabled>
+                <label>Espécie:</label>
+                <input class="form-control mb-3" [value] ="personagem.species" disabled>
+                <label>Gênero:</label>
+                <input class="form-control mb-3" [value] ="personagem.gender" disabled>
+                <label>Origem:</label>
+                <input class="form-control mb-3" [value] ="personagem.origin?.name" disabled>
+                <div class="d-flex justify-content-end mt-3">
+                    <button class="btn btn-secondary" routerLink="/personagens">Voltar</button>
+                </div>
+            </div>\
+        </div>
+    </div>
+</div>

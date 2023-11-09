@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <img src="../../assets/images/pngimg.com - rick_morty_PNG40.png" alt="Imagem" class="img-fluid mb-4">
+            <div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="usuario" [(ngModel)]="usuario" placeholder="Usuario">
+                </div>
+              
+                <div class="form-group">
+                    <input type="password" class="form-control" name="senha" [(ngModel)]="senha" placeholder="Senha">
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block" (click)="login()">Entrar</button>
+            </div>
+        </div>
+    </div>
+</div>
